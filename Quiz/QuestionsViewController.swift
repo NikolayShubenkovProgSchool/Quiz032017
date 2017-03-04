@@ -18,10 +18,13 @@ class QuestionsViewController: UIViewController {
     {   //когда сюда будут записаны новые вопросы 
         //возьмем первый из них и запишем в currentQeustion
         didSet {
+            currentQuestionIndex = 0
             currentQuestion = questionList?.first
         }
     }
     
+    //это индекс текущего вопроса
+    var currentQuestionIndex = 0
     var currentQuestion:Question?//текущий вопрос
     {
         //как только значение currentQuestion изменилось
@@ -50,8 +53,16 @@ class QuestionsViewController: UIViewController {
     }
     
     private func setup(){
-        
+        //UITableViewDataSource - в основном отвечает за то,
+        //что мы показываем
+        //какие ячейки и сколько показываем
         tableView.dataSource = self
+        
+        //UITableViewDelegate - нужен для того,
+        //чтобы обрабатывать различные события с tableView
+        //что делать, если нажали на ячейку,
+        //можно ли показывать элементы для удаления
+        tableView.delegate = self
         loadData()
     }
     
@@ -66,6 +77,19 @@ class QuestionsViewController: UIViewController {
         
         self.title = result.quizeName
         self.questionList = result.questions
+    }
+}
+
+extension QuestionsViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("ячейка с индексом \(indexPath) выбрана")
+        
+        //увеличим индекс вопроса на единицу
+        currentQuestionIndex += 1
+        
+        //самое время перейти к следующему вопросу.
+        currentQuestion = questionList?[currentQuestionIndex]
     }
 }
 
