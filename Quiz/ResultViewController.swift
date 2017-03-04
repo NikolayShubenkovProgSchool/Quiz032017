@@ -12,29 +12,36 @@ class ResultViewController: UIViewController {
     @IBOutlet var resultLabel: UILabel!
     @IBOutlet var progressView: UIProgressView!
 
-    var score = 0 //0 do 100
+    var score = 0 {//0 do 100
+        didSet {
+            if score < 0 {
+                score = 0
+            }
+            if score > 100 {
+                score = 100
+            }
+        }
+    }
     
+    //этот момент отлично подходит для подготовки к работе
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        resultLabel.text = "\(score)"
-        // Do any additional setup after loading the view.
+        
+        var text = ""
+        
+        switch score
+        {
+        case 0: text = "Вы бот, возможно"
+        
+        case 1...30:  text = "Повезет в другой раз"
+            
+        case 31...50: text = "Неплохо, но и не хорошо"
+            
+        case 51...99: text = "Отлично"
+            
+        default:      text = "Теперь точно бот"
+        }
+        
+        resultLabel.text = "\(score)\n\(text)."
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
