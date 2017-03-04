@@ -135,6 +135,44 @@
             </objects>
             <point key="canvasLocation" x="1837.5999999999999" y="786.65667166416802"/>
         </scene>
+        <!--Result View Controller-->
+        <scene sceneID="Xh9-FX-IX6">
+            <objects>
+                <viewController id="02X-Si-KvT" customClass="ResultViewController" customModule="Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7QL-mE-44w"/>
+                        <viewControllerLayoutGuide type="bottom" id="cYA-Nv-6IP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aBd-de-S3a">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ваш счет: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5H2-kX-ESj">
+                                <rect key="frame" x="133" y="321" width="109" height="26"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <color key="textColor" red="1" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fNC-3U-8P2">
+                                <rect key="frame" x="16" y="645" width="343" height="2"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5H2-kX-ESj" firstAttribute="centerY" secondItem="aBd-de-S3a" secondAttribute="centerY" id="aDh-I8-59Y"/>
+                            <constraint firstItem="5H2-kX-ESj" firstAttribute="centerX" secondItem="aBd-de-S3a" secondAttribute="centerX" id="fOH-DZ-Kqj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="progressView" destination="fNC-3U-8P2" id="bko-gN-c14"/>
+                        <outlet property="resultLabel" destination="5H2-kX-ESj" id="ilP-3M-IBk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FD6-6p-r1Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2574" y="787"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="D5b-bd-8kH">
             <objects>
