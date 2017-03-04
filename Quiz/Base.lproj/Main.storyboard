@@ -154,15 +154,17 @@
                                 <color key="textColor" red="1" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fNC-3U-8P2">
-                                <rect key="frame" x="16" y="645" width="343" height="2"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fNC-3U-8P2">
+                                <rect key="frame" x="36" y="377" width="303" height="2"/>
                             </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="5H2-kX-ESj" firstAttribute="centerY" secondItem="aBd-de-S3a" secondAttribute="centerY" id="aDh-I8-59Y"/>
                             <constraint firstItem="5H2-kX-ESj" firstAttribute="centerX" secondItem="aBd-de-S3a" secondAttribute="centerX" id="fOH-DZ-Kqj"/>
+                            <constraint firstItem="fNC-3U-8P2" firstAttribute="top" secondItem="5H2-kX-ESj" secondAttribute="bottom" constant="30" id="ghm-ND-2d5"/>
+                            <constraint firstItem="fNC-3U-8P2" firstAttribute="leading" secondItem="aBd-de-S3a" secondAttribute="leadingMargin" constant="20" id="ynv-gx-1WF"/>
+                            <constraint firstItem="fNC-3U-8P2" firstAttribute="trailing" secondItem="aBd-de-S3a" secondAttribute="trailingMargin" constant="-20" id="zZo-4k-6Y7"/>
                         </constraints>
                     </view>
                     <connections>

@@ -27,6 +27,8 @@ class ResultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        progressView.progress = Float(score) / 100
+        
         var text = ""
         
         switch score
