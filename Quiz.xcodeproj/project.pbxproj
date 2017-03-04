@@ -16,6 +16,7 @@
 		4F88E9ED1E6AB38300ECB910 /* cinema.json in Resources */ = {isa = PBXBuildFile; fileRef = 4F88E9EB1E6AB38300ECB910 /* cinema.json */; };
 		4F88E9F01E6ABA1500ECB910 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F88E9EF1E6ABA1500ECB910 /* Question.swift */; };
 		4F88E9F21E6AC2AA00ECB910 /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F88E9F11E6AC2AA00ECB910 /* DataLoader.swift */; };
+		4F88E9F41E6AD82400ECB910 /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F88E9F31E6AD82400ECB910 /* QuestionsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		4F88E9EB1E6AB38300ECB910 /* cinema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cinema.json; sourceTree = "<group>"; };
 		4F88E9EF1E6ABA1500ECB910 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		4F88E9F11E6AC2AA00ECB910 /* DataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
+		4F88E9F31E6AD82400ECB910 /* QuestionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,12 +64,10 @@
 		4F88E9D51E6AA29A00ECB910 /* Quiz */ = {
 			isa = PBXGroup;
 			children = (
-				4F88E9E81E6AA68300ECB910 /* TableDemoViewController.swift */,
-				4F88E9F11E6AC2AA00ECB910 /* DataLoader.swift */,
-				4F88E9D61E6AA29A00ECB910 /* AppDelegate.swift */,
-				4F88E9DA1E6AA29A00ECB910 /* Main.storyboard */,
-				4F88E9EF1E6ABA1500ECB910 /* Question.swift */,
+				4F88E9F71E6AD88800ECB910 /* ViewControllers */,
+				4F88E9F81E6AD89000ECB910 /* Models */,
 				4F88E9EE1E6AB3A900ECB910 /* Support Files */,
+				4F88E9F91E6AD8BF00ECB910 /* Views */,
 			);
 			path = Quiz;
 			sourceTree = "<group>";
@@ -75,6 +75,7 @@
 		4F88E9EE1E6AB3A900ECB910 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
+				4F88E9D61E6AA29A00ECB910 /* AppDelegate.swift */,
 				4F88E9DF1E6AA29A00ECB910 /* LaunchScreen.storyboard */,
 				4F88E9DD1E6AA29A00ECB910 /* Assets.xcassets */,
 				4F88E9EA1E6AB38300ECB910 /* animals.json */,
@@ -82,6 +83,48 @@
 				4F88E9E21E6AA29A00ECB910 /* Info.plist */,
 			);
 			name = "Support Files";
+			sourceTree = "<group>";
+		};
+		4F88E9F51E6AD85300ECB910 /* Questions */ = {
+			isa = PBXGroup;
+			children = (
+				4F88E9F31E6AD82400ECB910 /* QuestionsViewController.swift */,
+			);
+			name = Questions;
+			sourceTree = "<group>";
+		};
+		4F88E9F61E6AD86400ECB910 /* TableDemo */ = {
+			isa = PBXGroup;
+			children = (
+				4F88E9E81E6AA68300ECB910 /* TableDemoViewController.swift */,
+			);
+			name = TableDemo;
+			sourceTree = "<group>";
+		};
+		4F88E9F71E6AD88800ECB910 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4F88E9F61E6AD86400ECB910 /* TableDemo */,
+				4F88E9F51E6AD85300ECB910 /* Questions */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		4F88E9F81E6AD89000ECB910 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4F88E9F11E6AC2AA00ECB910 /* DataLoader.swift */,
+				4F88E9EF1E6ABA1500ECB910 /* Question.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		4F88E9F91E6AD8BF00ECB910 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4F88E9DA1E6AA29A00ECB910 /* Main.storyboard */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,6 +202,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F88E9F21E6AC2AA00ECB910 /* DataLoader.swift in Sources */,
+				4F88E9F41E6AD82400ECB910 /* QuestionsViewController.swift in Sources */,
 				4F88E9F01E6ABA1500ECB910 /* Question.swift in Sources */,
 				4F88E9E91E6AA68300ECB910 /* TableDemoViewController.swift in Sources */,
 				4F88E9D71E6AA29A00ECB910 /* AppDelegate.swift in Sources */,
