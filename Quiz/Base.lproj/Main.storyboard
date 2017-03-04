@@ -56,7 +56,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="EEt-Ks-ErW"/>
                     <connections>
-                        <outlet property="tableView" destination="RuO-LI-oCL" id="lcw-KJ-p8x"/>
+                        <outlet property="tableView" destination="RuO-LI-oCL" id="pjV-Mp-wes"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

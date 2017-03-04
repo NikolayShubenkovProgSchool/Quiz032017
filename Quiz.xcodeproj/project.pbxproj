@@ -15,6 +15,7 @@
 		4F88E9EC1E6AB38300ECB910 /* animals.json in Resources */ = {isa = PBXBuildFile; fileRef = 4F88E9EA1E6AB38300ECB910 /* animals.json */; };
 		4F88E9ED1E6AB38300ECB910 /* cinema.json in Resources */ = {isa = PBXBuildFile; fileRef = 4F88E9EB1E6AB38300ECB910 /* cinema.json */; };
 		4F88E9F01E6ABA1500ECB910 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F88E9EF1E6ABA1500ECB910 /* Question.swift */; };
+		4F88E9F21E6AC2AA00ECB910 /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F88E9F11E6AC2AA00ECB910 /* DataLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		4F88E9EA1E6AB38300ECB910 /* animals.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = animals.json; sourceTree = "<group>"; };
 		4F88E9EB1E6AB38300ECB910 /* cinema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cinema.json; sourceTree = "<group>"; };
 		4F88E9EF1E6ABA1500ECB910 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		4F88E9F11E6AC2AA00ECB910 /* DataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				4F88E9E81E6AA68300ECB910 /* TableDemoViewController.swift */,
+				4F88E9F11E6AC2AA00ECB910 /* DataLoader.swift */,
 				4F88E9D61E6AA29A00ECB910 /* AppDelegate.swift */,
 				4F88E9DA1E6AA29A00ECB910 /* Main.storyboard */,
 				4F88E9EF1E6ABA1500ECB910 /* Question.swift */,
@@ -155,6 +158,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F88E9F21E6AC2AA00ECB910 /* DataLoader.swift in Sources */,
 				4F88E9F01E6ABA1500ECB910 /* Question.swift in Sources */,
 				4F88E9E91E6AA68300ECB910 /* TableDemoViewController.swift in Sources */,
 				4F88E9D71E6AA29A00ECB910 /* AppDelegate.swift in Sources */,

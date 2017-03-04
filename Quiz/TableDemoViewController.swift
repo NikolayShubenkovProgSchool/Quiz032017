@@ -19,7 +19,15 @@ class TableDemoViewController:            UIViewController {
     override func       viewDidLoad() {
         super.viewDidLoad()
         
+        loadData()
+        
         tableView.dataSource = self
+    }
+    
+    func loadData(){
+        let loader = DataLoader()
+        let result = loader.loadData(fileName: "cinema")
+        print(result)
     }
 }
 
