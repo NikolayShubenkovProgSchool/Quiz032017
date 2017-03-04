@@ -19,12 +19,17 @@ class QuestionsViewController: UIViewController {
         //возьмем первый из них и запишем в currentQeustion
         didSet {
             currentQuestionIndex = 0
+            score = 0
             currentQuestion = questionList?.first
         }
     }
     
     //это индекс текущего вопроса
     var currentQuestionIndex = 0
+    
+    //счет
+    var score = 0
+    
     var currentQuestion:Question?//текущий вопрос
     {
         //как только значение currentQuestion изменилось
@@ -83,10 +88,26 @@ class QuestionsViewController: UIViewController {
 extension QuestionsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("ячейка с индексом \(indexPath) выбрана")
+        
+        //проверим наш ответ
+        //для этого варианта
+        let selectedAnswer = currentQuestion?.answers[indexPath.row]
+        
+        //зададим значение по умолчанию на случай,
+        //если текущий вопрос не выбран
+        if currentQuestion?.answerIsCorrect(answer: selectedAnswer) ?? false{
+            score += 1
+        }
+        print("ячейка с индексом \(indexPath) выбрана счет:\(score)")
         
         //увеличим индекс вопроса на единицу
         currentQuestionIndex += 1
+        
+        guard currentQuestionIndex < questionList?.count ?? 0 else {
+            print("дальше не пойдем")
+            
+            return
+        }
         
         //самое время перейти к следующему вопросу.
         currentQuestion = questionList?[currentQuestionIndex]
