@@ -44,6 +44,7 @@ extension TableDemoViewController: UITableViewDataSource
         //row - это индекс ячейки внутри секции
         let strToShow = strings[indexPath.row]
         
+//        indexPath.section - номер секции ячейки
         //зададим текст в ячейке, используя конкретную строку
         cell.textLabel?.text = "\(indexPath.row) = \(strToShow)"
         
