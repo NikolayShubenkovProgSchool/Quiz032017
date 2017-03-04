@@ -45,8 +45,49 @@ class QuestionsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        log(message: "Это идеальное место для подготовки к работе, когда нужно выполнить подготовку единожды за все время жизни контроллера")
+        
         setup()
         // Do any additional setup after loading the view.
+    }
+    
+    //этот метод вызывается в момент, когда контроллер вот-вот появится
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        log(message: "этот метод вызывается в момент, когда контроллер вот-вот появится. Как правило тут можно подготовится к отображению анимации.")
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        log(message: "Он вызывает как только анимация перехода на ваш экране завершена. Это идеальное место для того, чтобы начать какую-то анимацию.")
+        //тем самым мы перезапишем список вопросов
+        //и сбросим все счетчики и параметры
+        
+        loadData()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        log(message: "Вызывается, когда наш экран начал пропадать. Допустим началась анимация перехода на новый экран. или наоборот уход на уровень выше")
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        log(message: "пропали мы с экрана. Такие дела. Можно отписаться от уведомлений о том, что клавиатура появляется или исчезает с экрана.")
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        log(message: "Тревога. У устройства кончается оперативная память. Нужно срочно избавляться от ресурсов, которые вы можете восстановить позднее")
+    }
+    
+    deinit {
+        log(message:"это последнее место, где наш контроллер может что-то сделать напоследок")
+    }
+    
+    //#function - имя метода, в котором этот код выполняется
+    func log(message:String, methodName:String = #function){
+        print("\n\(methodName): \(message)")
     }
     
     //2. этот метод вызывается всегда перед переходом на новый экран

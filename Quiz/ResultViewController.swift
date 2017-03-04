@@ -23,6 +23,10 @@ class ResultViewController: UIViewController {
         }
     }
     
+    deinit {
+        print("buy buy. с наступающим")
+    }
+    
     //этот момент отлично подходит для подготовки к работе
     override func viewDidLoad() {
         super.viewDidLoad()
