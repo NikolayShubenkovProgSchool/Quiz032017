@@ -49,6 +49,22 @@ class QuestionsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    //2. этот метод вызывается всегда перед переходом на новый экран
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        //В этот момент новый ViewController
+        //только-только создан.
+        //у него не загружен ни один view
+        //
+        
+        //если мы переходим на ResultViewController
+        if let destVC = segue.destination as? ResultViewController,
+            //и параметром при переходе является объект типа Int
+            let scoreToShow = sender as? Int{
+            destVC.score = scoreToShow
+        }
+    }
+    
     //MARK: - Setup
     
     private func updateViews(){
@@ -105,6 +121,19 @@ extension QuestionsViewController: UITableViewDelegate {
         
         guard currentQuestionIndex < questionList?.count ?? 0 else {
             print("дальше не пойдем")
+            
+            //вычислим счет и передадим дальше
+            let score = Double(self.score) / Double(questionList?.count ?? 1) * 100
+            
+            //1. запустим переход на новый экран
+            //названием перехода show result
+            performSegue(withIdentifier: "Show Result",
+                         sender: Int(score))
+            
+            //1.5 затем система создаст вьюконтроллер новый
+            //и перед тем, как его показать
+            //вызовет у экземпляра нашего класса
+            //метод prepare(for segue:UISegue, sender:Any)
             
             return
         }

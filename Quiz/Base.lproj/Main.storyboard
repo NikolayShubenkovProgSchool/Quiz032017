@@ -129,6 +129,7 @@
                         <outlet property="imageView" destination="Nct-S2-bRB" id="r96-8o-yKh"/>
                         <outlet property="questionText" destination="6I9-hT-9RY" id="xjy-Cr-dWU"/>
                         <outlet property="tableView" destination="4gY-OU-gXo" id="b9Y-eU-1Ua"/>
+                        <segue destination="02X-Si-KvT" kind="show" identifier="Show Result" id="w5W-VK-egy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n2j-G5-aZu" userLabel="First Responder" sceneMemberID="firstResponder"/>
